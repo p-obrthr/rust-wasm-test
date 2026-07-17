@@ -8,7 +8,7 @@ struct GameState {
 }
 
 fn main() {
-    let (mut rl, thread) = raylib::init().size(WIDTH, HEIGHT).title("Pong").build();
+    let (mut rl, thread) = raylib::init().size(WIDTH, HEIGHT).title("test").build();
 
     rl.set_target_fps(60);
 
