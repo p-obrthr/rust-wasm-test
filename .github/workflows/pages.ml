@@ -34,6 +34,11 @@ jobs:
           cp target/wasm32-unknown-emscripten/release/*.js public/
           cp target/wasm32-unknown-emscripten/release/*.wasm public/
 
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
       - name: Deploy
         uses: actions/deploy-pages@v4
         with:
