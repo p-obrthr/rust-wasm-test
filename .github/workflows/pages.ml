@@ -36,7 +36,7 @@ jobs:
           cp target/wasm32-unknown-emscripten/release/*.wasm public/
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+        uses: actions/deploy-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
