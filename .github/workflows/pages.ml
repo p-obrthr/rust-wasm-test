@@ -34,13 +34,14 @@ jobs:
           cp target/wasm32-unknown-emscripten/release/*.js public/
           cp target/wasm32-unknown-emscripten/release/*.wasm public/
 
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
       - name: Deploy
+        id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
