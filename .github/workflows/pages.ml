@@ -30,7 +30,6 @@ jobs:
 
       - name: Prepare Pages
         run: |
-          mkdir public
           cp target/wasm32-unknown-emscripten/release/index.html public/
           cp target/wasm32-unknown-emscripten/release/*.js public/
           cp target/wasm32-unknown-emscripten/release/*.wasm public/
